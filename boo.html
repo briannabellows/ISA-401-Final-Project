@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ISA 401 Final Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>World Happiness</h2>
+  <p>Joy Okeke, Rachel McConnell, Kate Huter and Brianna Bellows</p>
+
+<p>ISA 401 - Fadel Megahead</p>
+
+<p>May 2017</p>
+<p>:-)</p>
+<p>Through our data visualization we aim to explore world happiness through examining different factors that contribute to a country's happiness.</p>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Bar Graph</a></li>
+    <li><a data-toggle="tab" href="#menu2">Scatter Plots</a></li>
+    <!-- <li><a data-toggle="tab" href="#menu3">Grouped Bar Chart</a></li> -->
+    
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>HOME</h3>
+      <p>The following tabs include a bar chart and scatter plots based off a dataset from the World Happiness Report 2016.</p>
+      <p>
+      <p><b>Overview and Motivation</b> </p>
+<p><u>About The World Happiness Report</u></p> 
+
+<p>The World Happiness Report is a revolutionary survey depicting the state of global happiness. This report has been published three times in the past five years: 2012, 2013, and in 2015. The 2016 update of The World Happiness Report ranks countries by their happiness level as primer experts across fields such as “economics, psychology, survey analysis, national statistics, health, public policy and more to describe how measurements of well-being can be used effectively to assess the progress of nations”. How this report works is that the report looks over the current state of happiness around the world and then “shows how the new science of happiness explains personal and national variations in happiness”. (Kaggle, World Happiness Report)</p>
+
+<p>The data in the report is collected from the Gallup World Poll. The scores are derived “based on answers to the main life evaluation question asked in the poll” where they rate their current lives on a scale of 0-10, 0 meaning you live a terrible life and 10 meaning you live the most amazing life imaginable.</p> 
+
+<p><u>The World Happiness Report Purpose</u></p>
+<p>The purpose of the World Happiness Report is to distinguish which factors contribute the most to happiness, and if countries experience an  increase or decrease in their happiness levels over the years and why. The goal we are trying to accomplish through analyzing the World Happiness Report data is to distinguish the key factors that do have an effect on happiness by region in the world. </p>
+
+
+<p><b>Related Work</b></p> 
+<p>There has been some research previously on world happiness throughout many years, many countries and including many variables. Since we are focusing mainly on the most current years 2015, 2016 and 2017, there are many different results. Research has already looked at a variety of different variables including, GDP, income, life expectancy, child mortality, freedom, education and many more. There are many correlations that already match according to each of these variables, being both negative and positive. There has also been research between happiness and not only countries but more specific like regions, publics and cities. </p>
+<p>Looking at specific research that has been done, in 2014 there was a poll that went out that correlated GDP per capita versus life satisfaction and results were shown in a visual. Countries like USA, France, Japan were ranked highest on this category with a positive correlation. We plan to take these variables and look more in depth than what has already been done, and look into the most recent years. We want to look at variables that affect world happiness the most,  and see if these variables vary among the different regions.  We want to make graphics and visuals to show how the countries or regions have rated their happiness, and break down what really goes into each regions happiness.</p> 
+
+
+<p><b>Questions</b></p>
+<p>The main question we want to answer is what is the best predictor of happiness?   And does that predictor change by region of the world?  These questions will shape the way we will look at these factors as well as how these factors influence regions of the world. We hope to gain knowledge about what regions value which predictors more, the same, or less than other regions of the world. </p>
+
+<p>We looked at three economic metrics to determine how they compare to a country’s happiness level:</p>
+<p><u>GDP Per Capita</u></p>
+<p>We want to know if the economic predictor, GDP, was a good indicator in relation to a country’s happiness level. We want to determine if a country has a high GDP if their happiness level will also be high. </p>
+<p><u>Unemployment Rate</u></p>
+<p>We want to know if the unemployment rate is a significant factor for determining happiness score. We want to determine if people who live in countries with low unemployment rates will have a higher happiness score.</p>
+<p><u>Inflation Rate</u></p>
+<p>We want to know if inflation rate is a significant factor for determining happiness. We want to know if generosity is a significant factor for determining happiness. We want determine if a country with a low inflation rate will have a higher happiness score. </p>
+
+
+<p><b>Data</b></p>
+<p><u>Factors in The World Happiness Report</u> </p>
+<p>The Gallup World Poll data generated the World Happiness Report based on the scores of six deciding factors:</p>
+<p>Economic: The economic status of each country in relation to their happiness score on a scale of 0-10. We believe this will reveal if a country values their economy more than other factors when determining happiness. 
+Family: If the size of one’s family in relation to the happiness score. We believe this will reveal if a country values the size of their family more than other factors when determining happiness. </p>
+ <p>Life Expectancy: How long a person will live in relation to their happiness score. We believe this will reveal if people live longer they will value life expectancy more than other factors for determining happiness. </p>
+<p>Freedom: If the freedom status of one's country in relation to their happiness score. We believe that this will reveal if a country is happier depending on how high or low their freedom score is and value that more or less when determining happiness. </p>
+<p>Absence of Corruption: If the people’s trust of government has a relation to their happiness score. We believe that this will reveal the presence or lack of corruption impacts one’s happiness level and affects the value in relation to the other factors for determining happiness. </p>
+<p>Generosity: If people’s generosity is in relation to their happiness score. We believe this will reveal if people value generosity and if it does have an affect on their happiness level. </p>
+
+      </p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Region</h3>
+      <p>Below is a bar graph of the happiness scores by region.</p>
+
+<div class="col-md-6" id="body" align="center"><svg width="960" height="20"><g transform="translate(40,20)"></g></svg><div class="tooltip" style="opacity: 0;"></div>
+
+<body>   
+<script src="http://d3js.org/d3.v4.min.js"></script>
+<script>
+
+(function() {
+var margin = {top: 20, right: 20, bottom: 50, left: 40},
+    width = 1490 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+// set the ranges
+var x = d3.scaleBand()
+          .range([0, width])
+          .padding(0.1);
+var y = d3.scaleLinear()
+          .range([height, 0]);
+          
+// append the svg object to the body of the page
+// append a 'group' element to 'svg'
+// moves the 'group' element to the top left margin
+var svg = d3.select("#body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", 
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// get the data
+d3.csv("joy.csv", function(error, data) {
+  if (error) throw error;
+
+  // format the data
+  data.forEach(function(d) {
+    d.HappinessScore = +d.HappinessScore;
+  });
+
+  // Scale the range of the data in the domains
+  x.domain(data.map(function(d) { return d.Region; }));
+  y.domain([0, d3.max(data, function(d) { return d.HappinessScore; })]);
+
+  // append the rectangles for the bar chart
+  svg.selectAll(".bar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", function(d) { return x(d.Region); })
+      .attr("width", x.bandwidth())
+      .attr("y", function(d) { return y(d.HappinessScore); })
+      .attr("height", function(d) { return height - y(d.HappinessScore); });
+
+  // add the x Axis
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+
+ // text label for the x axis
+  svg.append("text")             
+      .attr("transform",
+            "translate(" + (width/2) + " ," + 
+                           (height + margin.top + 20) + ")")
+      .style("text-anchor", "middle")
+      .text("Region");
+
+  // Add the y Axis
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+  // text label for the y axis
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Happiness Score");      
+});
+})();
+</script>
+<style>
+  .bar { fill: LightSalmon; }
+</style>
+</body>
+
+     
+    </div>
+</div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Economy</h3>
+      <p>Through these three scatterplots, we aim to explore three different economic factors: GDP (per capita), unemployment rates, and inflation.</p>
+
+<div class="col-md-6" id="area1" align="center"><svg width="960" height="20"><g transform="translate(40,20)"></g></svg><div class="tooltip" style="opacity: 0;"></div>
+
+<div class="col-md-6" id="area2" align="center"><svg width="960" height="20"><g transform="translate(40,20)"></g></svg><div class="tooltip" style="opacity: 0;"></div>
+
+<div class="col-md-6" id="area3" align="center"><svg width="960" height="20"><g transform="translate(40,20)"></g></svg><div class="tooltip" style="opacity: 0;"></div>
+
+
+
+<style>
+body {
+  font: 11px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+</style>
+
+
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+<script>
+
+
+(function() {
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+/* 
+ * value accessor - returns the value to encode for a given data object.
+ * scale - maps value to a visual display encoding, such as a pixel position.
+ * map function - maps from data value to display value
+ * axis - sets up axis
+ */ 
+
+// setup x 
+var xValue = function(d) { return d.UnemploymentRate;}, // data -> value
+    xScale = d3.scaleLinear().range([0, width]), // value -> display
+    xMap = function(d) { return xScale(xValue(d));}, // data -> display
+    xAxis = d3.axisBottom(xScale);
+
+// setup y
+var yValue = function(d) { return d.HappinessScore;}, // data -> value
+    yScale = d3.scaleLinear().range([height, 0]), // value -> display
+    yMap = function(d) { return yScale(yValue(d));}, // data -> display
+    yAxis = d3.axisLeft(yScale);
+
+// setup fill color
+var cValue = function(d) { return d.Region;},
+    color = d3.scaleOrdinal(d3.schemeCategory10);
+
+// add the graph canvas to the body of the webpage
+var svg = d3.select("#area1").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// add the tooltip area to the webpage
+var tooltip = d3.select("#area1").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+// load data
+d3.csv("joy.csv", function(error, data) {
+
+
+  // change string (from CSV) into number format
+  data.forEach(function(d) {
+    d.HappinessScore = +d.HappinessScore;
+    d.UnemploymentRate = +d.UnemploymentRate;
+//    console.log(d);
+  });
+
+  // don't want dots overlapping axis, so add in buffer to data domain
+  var x = xScale.domain([d3.min(data, xValue), d3.max(data, xValue)]);
+  var y = yScale.domain([0, d3.max(data, yValue)]);
+
+ 
+
+var valueline = d3.line()
+    .x(function(d) { return x(d.UnemploymentRate); })
+    .y(function(d) { return y(d.HappinessScore); });
+   
+   // Add the x Axis
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+// text label for the x axis
+  svg.append("text")             
+      .attr("x", 480 )
+      .attr("y",  475 )
+      .style("text-anchor", "middle")
+      .text("Unemployment Rate");
+
+ // Add the y Axis
+  svg.append("g")
+      // .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisLeft(y));
+
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Happiness Score"); 
+
+  // draw dots
+  svg.selectAll(".dot")
+      .data(data)
+    .enter().append("circle")
+      .attr("class", "dot")
+      .attr("r", 3.5)
+      .attr("cx", xMap)
+      .attr("cy", yMap)
+      .style("fill", function(d) { return color(cValue(d));}) 
+      .on("mouseover", function(d) {
+          tooltip.transition()
+               .duration(200)
+               .style("opacity", .9);
+
+  
+
+          tooltip.html(d["Country"] + "<br/> (" + xValue(d) 
+          + ", " + yValue(d) + ")")
+
+               .style("left", (d3.event.pageX + 5) + "px")
+               .style("top", (d3.event.pageY - 28) + "px");
+      })
+      .on("mouseout", function(d) {
+          tooltip.transition()
+               .duration(500)
+               .style("opacity", 0);
+      });
+  // draw legend
+  var legend = svg.selectAll(".legend")
+      .data(color.domain())
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+  // draw legend colored rectangles
+  legend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", color);
+
+  // draw legend text
+  legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d;})
+// });
+// })();
+
+
+// legendSpace = width/dataNest.length; // spacing for the legend
+
+    // // Loop through each symbol / key
+    // dataNest.forEach(function(d,i)  
+
+        // svg.append("path")
+        //     .attr("class", "line")
+        //     .style("stroke", function() { // Add the colours dynamically
+        //         return d.color = color(d.key); })
+        //     .attr("id", 'tag'+d.key.replace(/\s+/g, '')) // assign ID
+        //     .attr("d", priceline(d.Region));
+
+        // // Add the Legend
+        // svg.append("text")
+        //     .attr("x", (legendSpace/2)+i*legendSpace)  // space legend
+        //     .attr("y", height + (margin.bottom/2)+ 5)
+        //     .attr("class", "legend")    // style the legend
+        //     .style("fill", function() { // Add the colours dynamically
+        //         return d.color = color(d.key); })
+        //     .on("click", function(){
+        //         // Determine if current line is visible 
+        //         var active   = d.active ? false : true,
+        //         newOpacity = active ? 0 : 1; 
+        //         // Hide or show the elements based on the ID
+        //         d3.select("#tag"+d.key.replace(/\s+/g, ''))
+        //             .transition().duration(100) 
+        //             .style("opacity", newOpacity); 
+        //         // Update whether or not the elements are active
+        //         d.active = active;
+        //         })  
+        //     .text(d.key); 
+
+    // );
+
+    // Add the X Axis
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    // Add the Y Axis
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+});
+})();
+
+
+</script>
+</body>
+
+<style>
+body {
+  font: 11px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+</style>
+
+
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+<script>
+
+
+(function() {
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+/* 
+ * value accessor - returns the value to encode for a given data object.
+ * scale - maps value to a visual display encoding, such as a pixel position.
+ * map function - maps from data value to display value
+ * axis - sets up axis
+ */ 
+
+// setup x 
+var xValue = function(d) { return d.InflationRate;}, // data -> value
+    xScale = d3.scaleLinear().range([0, width]), // value -> display
+    xMap = function(d) { return xScale(xValue(d));}, // data -> display
+    xAxis = d3.axisBottom(xScale);
+
+// setup y
+var yValue = function(d) { return d.HappinessScore;}, // data -> value
+    yScale = d3.scaleLinear().range([height, 0]), // value -> display
+    yMap = function(d) { return yScale(yValue(d));}, // data -> display
+    yAxis = d3.axisLeft(yScale);
+
+// setup fill color
+var cValue = function(d) { return d.Region;},
+    color = d3.scaleOrdinal(d3.schemeCategory10);
+
+// add the graph canvas to the body of the webpage
+var svg = d3.select("#area2").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// add the tooltip area to the webpage
+var tooltip = d3.select("#area2").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+// load data
+d3.csv("joy.csv", function(error, data) {
+
+
+  // change string (from CSV) into number format
+  data.forEach(function(d) {
+    d.HappinessScore = +d.HappinessScore;
+    d.InflationRate = +d.InflationRate;
+//    console.log(d);
+  });
+
+  // don't want dots overlapping axis, so add in buffer to data domain
+
+var x = xScale.domain([d3.min(data, xValue), d3.max(data, xValue)]);
+  var y = yScale.domain([0, d3.max(data, yValue)]);
+
+var valueline = d3.line()
+    .x(function(d) { return x(d.InflationRate); })
+    .y(function(d) { return y(d.HappinessScore); });
+   
+   // Add the x Axis
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+// text label for the x axis
+  svg.append("text")             
+      .attr("x", 480 )
+      .attr("y",  475 )
+      .style("text-anchor", "middle")
+      .text("Inflation Rate");
+
+ // Add the y Axis
+  svg.append("g")
+      // .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisLeft(y));
+
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Happiness Score"); 
+
+  // draw dots
+  svg.selectAll(".dot")
+      .data(data)
+    .enter().append("circle")
+      .attr("class", "dot")
+      .attr("r", 3.5)
+      .attr("cx", xMap)
+      .attr("cy", yMap)
+      .style("fill", function(d) { return color(cValue(d));}) 
+      .on("mouseover", function(d) {
+          tooltip.transition()
+               .duration(200)
+               .style("opacity", .9);
+
+  
+
+          tooltip.html(d["Country"] + "<br/> (" + xValue(d) 
+          + ", " + yValue(d) + ")")
+
+               .style("left", (d3.event.pageX + 5) + "px")
+               .style("top", (d3.event.pageY - 28) + "px");
+      })
+      .on("mouseout", function(d) {
+          tooltip.transition()
+               .duration(500)
+               .style("opacity", 0);
+      });
+
+  // draw legend
+  var legend = svg.selectAll(".legend")
+      .data(color.domain())
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  // draw legend colored rectangles
+  legend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", color);
+
+  // draw legend text
+  legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d;})
+});
+})();
+
+
+</script>
+</body>
+
+
+<style>
+body {
+  font: 15px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+</style>
+
+
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+<script>
+
+
+(function() {
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+/* 
+ * value accessor - returns the value to encode for a given data object.
+ * scale - maps value to a visual display encoding, such as a pixel position.
+ * map function - maps from data value to display value
+ * axis - sets up axis
+ */ 
+
+// setup x 
+var xValue = function(d) { return d.Economy;}, // data -> value
+    xScale = d3.scaleLinear().range([0, width]), // value -> display
+    xMap = function(d) { return xScale(xValue(d));}, // data -> display
+    xAxis = d3.axisBottom(xScale);
+
+// setup y
+var yValue = function(d) { return d.HappinessScore;}, // data -> value
+    yScale = d3.scaleLinear().range([height, 0]), // value -> display
+    yMap = function(d) { return yScale(yValue(d));}, // data -> display
+    yAxis = d3.axisLeft(yScale);
+
+// setup fill color
+var cValue = function(d) { return d.Region;},
+    color = d3.scaleOrdinal(d3.schemeCategory10);
+
+// add the graph canvas to the body of the webpage
+var svg = d3.select("#area3").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+// add the tooltip area to the webpage
+var tooltip = d3.select("#area3").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+// load data
+d3.csv("joy.csv", function(error, data) {
+
+
+  // change string (from CSV) into number format
+  data.forEach(function(d) {
+    d.HappinessScore = +d.HappinessScore;
+    d.Economy = +d.Economy;
+//    console.log(d);
+  });
+
+  // don't want dots overlapping axis, so add in buffer to data domain
+
+var x = xScale.domain([d3.min(data, xValue), d3.max(data, xValue)]);
+  var y = yScale.domain([0, d3.max(data, yValue)]);
+
+
+var valueline = d3.line()
+    .x(function(d) { return x(d.Economy); })
+    .y(function(d) { return y(d.HappinessScore); });
+   
+   // Add the x Axis
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+// text label for the x axis
+  svg.append("text")             
+      .attr("x", 480 )
+      .attr("y",  475 )
+      .style("text-anchor", "middle")
+      .text("Economy (GDP Per Capita)");
+
+ // Add the y Axis
+  svg.append("g")
+      // .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisLeft(y));
+
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Happiness Score"); 
+
+  // draw dots
+  svg.selectAll(".dot")
+      .data(data)
+    .enter().append("circle")
+      .attr("class", "dot")
+      .attr("r", 3.5)
+      .attr("cx", xMap)
+      .attr("cy", yMap)
+      .style("fill", function(d) { return color(cValue(d));}) 
+      .on("mouseover", function(d) {
+          tooltip.transition()
+               .duration(200)
+               .style("opacity", .9);
+
+  
+
+          tooltip.html(d["Country"] + "<br/> (" + xValue(d) 
+          + ", " + yValue(d) + ")")
+
+               .style("left", (d3.event.pageX + 5) + "px")
+               .style("top", (d3.event.pageY - 28) + "px");
+      })
+      .on("mouseout", function(d) {
+          tooltip.transition()
+               .duration(500)
+               .style("opacity", 0);
+      });
+
+  // draw legend
+  var legend = svg.selectAll(".legend")
+      .data(color.domain())
+    .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+  // draw legend colored rectangles
+  legend.append("rect")
+      .attr("x", width - 18)
+      .attr("width", 18)
+      .attr("height", 18)
+      .style("fill", color);
+
+  // draw legend text
+  legend.append("text")
+      .attr("x", width - 24)
+      .attr("y", 9)
+      .attr("dy", ".35em")
+      .style("text-anchor", "end")
+      .text(function(d) { return d;})
+});
+})();
+
+
+</script>
+</body>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+  
+
+</body>
+</html>
+
+
